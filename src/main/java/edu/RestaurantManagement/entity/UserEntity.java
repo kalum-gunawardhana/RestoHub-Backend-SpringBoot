@@ -29,6 +29,5 @@ public class UserEntity {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    @NotBlank(message = "User role cannot be blank")
     private UserRole userRole;
 }
