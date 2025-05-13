@@ -1,5 +1,6 @@
 package edu.RestaurantManagement.entity;
 
+import edu.RestaurantManagement.enums.UserRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -26,4 +27,8 @@ public class UserEntity {
 
     @NotBlank(message = "Password cannot be blank")
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    @NotBlank(message = "User role cannot be blank")
+    private UserRole userRole;
 }
